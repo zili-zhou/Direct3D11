@@ -240,7 +240,7 @@ bool GameAPP::InitResource()
 	//初始化常量缓冲区的值
 	//其中view和projective矩阵需要预先进行一次转置以抵消HLSL列主矩阵的转置，至于world矩阵已经是单位矩阵就不需要了
 	m_CBuffer.world = XMMatrixIdentity();//单位矩阵转置为自身
-	//Builds a view matrix for a left-handed coordinate system using a camera position, an up direction, and a focal point.    
+	//Builds a view matrix for a left-handed coordinate system using a camera position, a focal point, and an up direction.    
 	m_CBuffer.view = XMMatrixTranspose(XMMatrixLookAtLH
 	(
 		XMVectorSet(0.0f, 0.0f, 5.0f, 0.0f),
