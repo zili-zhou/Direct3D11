@@ -243,7 +243,7 @@ bool GameAPP::InitResource()
 	//Builds a view matrix for a left-handed coordinate system using a camera position, a focal point, and an up direction.    
 	m_CBuffer.view = XMMatrixTranspose(XMMatrixLookAtLH
 	(
-		XMVectorSet(0.0f, 0.0f, 5.0f, 0.0f),
+		XMVectorSet(1.0f, 0.0f, 0.0f, 0.0f),
 		XMVectorSet(0.0f, 0.0f, 0.0f, 0.0f),
 		XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f)
 	));
@@ -254,8 +254,8 @@ bool GameAPP::InitResource()
 		//float NearZ,近平面（正）
 		//float FarZ 远平面（负）
 	//);
-	m_CBuffer.projection = XMMatrixTranspose(XMMatrixPerspectiveFovLH(XM_PI*0.6f, AspectRatio(), 1.0f, 1000.0f));//XM_PIDIV2：PI/2
-
+	//m_CBuffer.projection = XMMatrixTranspose(XMMatrixPerspectiveFovLH(XM_PI*0.8f, AspectRatio(), 1.0f, 10.0f));//XM_PIDIV2：PI/2
+	m_CBuffer.projection = XMMatrixTranspose(XMMatrixOrthographicLH(10.0f, 10.0f, 1.0f, 10.0f));
 
 
 	// 输入装配阶段的顶点缓冲区设置
