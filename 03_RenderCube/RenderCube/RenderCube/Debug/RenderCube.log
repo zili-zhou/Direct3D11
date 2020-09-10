@@ -1,2 +1,10 @@
-﻿  GameAPP.cpp
-  RenderCube.vcxproj -> D:\教材\图形学\Direct3D\DirectX11-With-Windows-SDK-master\Direct3D11_Tutorial\RenderCube\RenderCube\Debug\RenderCube.exe
+﻿  compilation object save succeeded; see D:\教材\图形学\Direct3D\DirectX11-With-Windows-SDK-master\Direct3D11_Tutorial\03_RenderCube\RenderCube\RenderCube\HLSL\Cube_PS.cso
+  compilation object save succeeded; see D:\教材\图形学\Direct3D\DirectX11-With-Windows-SDK-master\Direct3D11_Tutorial\03_RenderCube\RenderCube\RenderCube\HLSL\Cube_VS.cso
+  D3DApp.cpp
+  D3DUtil.cpp
+  DXTrace.cpp
+  GameAPP.cpp
+  GamerTimer.cpp
+  main.cpp
+  正在生成代码...
+  RenderCube.vcxproj -> D:\教材\图形学\Direct3D\DirectX11-With-Windows-SDK-master\Direct3D11_Tutorial\03_RenderCube\RenderCube\Debug\RenderCube.exe
