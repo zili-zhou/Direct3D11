@@ -38,10 +38,11 @@ void GameAPP::OnResize()
 
 void GameAPP::UpdateScene(float dt)
 {
-	static float phi = 0.0f, theta = 0.0f;//X，Y方向的旋转角
-	phi += 0.0001f;
-	theta += 0.00015f;
-	m_CBuffer.world = XMMatrixTranspose(XMMatrixRotationX(phi) * XMMatrixRotationY(theta));
+	static float phi = 0.0f, theta = 0.0f,psi=0.0f;//X，Y, Z方向的旋转角
+	phi += 0.001f;
+	theta += 0.0015f;
+	psi += 0.00030f;
+	m_CBuffer.world = XMMatrixTranspose(XMMatrixRotationX(phi) * XMMatrixRotationY(theta) * XMMatrixRotationZ(psi));
 	// DYNAMIC更新常量缓冲区，让立方体转起来
 	D3D11_MAPPED_SUBRESOURCE mappedData;//获取已经映射到缓冲区的内存
 
@@ -67,7 +68,9 @@ void GameAPP::DrawScene()
 	m_pd3dImmediateContext->ClearDepthStencilView(m_pDepthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 	//IDXGISwapChain::Present方法--前后备缓冲区交换并呈现
-	m_pd3dImmediateContext->DrawIndexed(36, 0, 0); //索引数目，起始索引位置，起始顶点位置
+	//m_pd3dImmediateContext->DrawIndexed(54, 0, 0); //索引数目，起始索引位置，起始顶点位置
+	m_pd3dImmediateContext->DrawIndexed(36, 0, 0);
+	m_pd3dImmediateContext->DrawIndexed(18, 36, 7);
 	HR(m_pSwapChain->Present(0, 0));
 
 }
@@ -114,6 +117,7 @@ bool GameAPP::InitResource()
 
 	VertexPosColor CubeVertices[] =
 	{
+		/*
 		{ XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT4(0.0f, 0.0f, 0.0f, 1.0f) },
 		{ XMFLOAT3(-1.0f, 1.0f, -1.0f), XMFLOAT4(1.0f, 0.0f, 0.0f, 1.0f) },
 		{ XMFLOAT3(1.0f, 1.0f, -1.0f), XMFLOAT4(1.0f, 1.0f, 0.0f, 1.0f) },
@@ -122,6 +126,24 @@ bool GameAPP::InitResource()
 		{ XMFLOAT3(-1.0f, 1.0f, 1.0f), XMFLOAT4(1.0f, 0.0f, 1.0f, 1.0f) },
 		{ XMFLOAT3(1.0f, 1.0f, 1.0f), XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f) },
 		{ XMFLOAT3(1.0f, -1.0f, 1.0f), XMFLOAT4(0.0f, 1.0f, 1.0f, 1.0f) }
+		*/
+		// cube 8 points
+		{ XMFLOAT3(1.0f, -1.0f, -1.0f), XMFLOAT4{1.0f, 0.0f, 0.0f, 0.0f} },
+		{ XMFLOAT3(1.0f, 1.0f, -1.0f), XMFLOAT4{0.0f, 1.0f, 0.0f, 0.0f} },
+		{ XMFLOAT3(3.0f, 1.0f, -1.0f), XMFLOAT4{0.0f, 0.0f, 1.0f, 0.0f} },
+		{ XMFLOAT3(3.0f, -1.0f, -1.0f), XMFLOAT4{1.0f, 1.0f, 0.0f, 0.0f} },
+
+		{ XMFLOAT3(1.0f, -1.0f, 1.0f), XMFLOAT4{1.0f, 0.0f, 1.0f, 0.0f} },
+		{ XMFLOAT3(1.0f, 1.0f, 1.0f), XMFLOAT4{0.0f, 1.0f, 1.0f, 0.0f} },
+		{ XMFLOAT3(3.0f, 1.0f, 1.0f), XMFLOAT4{0.0f, 0.0f, 0.0f, 0.0f} },
+		{ XMFLOAT3(3.0f, -1.0f, 1.0f), XMFLOAT4{1.0f, 1.0f, 1.0f, 0.0f} },
+
+		// Rectangular pyramid 5 points
+		{ XMFLOAT3(-3.0f, 0.0f, 0.0f), XMFLOAT4{1.0f, 0.0f, 0.0f, 0.0f} },
+		{ XMFLOAT3(-2.0f, 0.0f, 1.0f), XMFLOAT4{1.0f, 1.0f, 0.0f, 0.0f} },
+		{ XMFLOAT3(-1.0f, 0.0f, 0.0f), XMFLOAT4{1.0f, 0.0f, 1.0f, 0.0f} },
+		{ XMFLOAT3(-2.0f, 0.0f, -1.0f), XMFLOAT4{0.0f, 1.0f, 1.0f, 0.0f} },
+		{ XMFLOAT3(-2.0f, 1.0f, 0.0f), XMFLOAT4{0.0f, 1.0f, 0.0f, 0.0f} },
 	};
 
 	//设置顶点缓冲区描述
@@ -141,7 +163,7 @@ bool GameAPP::InitResource()
 
 	//索引数组
 	DWORD indices[] =
-	{
+	{/*
 		//正面
 		0,1,2,
 		2,3,0,
@@ -161,7 +183,34 @@ bool GameAPP::InitResource()
 		4,0,3,
 		3,7,4,
 		
-
+		//Rectangular pyramid 四棱锥
+		8, 12, 11,
+		11, 12, 10,
+		10, 12, 9,
+		9, 12, 8,
+		8, 11, 9, // 地面2四边形由两个三角形组成
+		9, 11, 10 // 注意地面的顺序
+		*/
+		// cube
+		0, 1, 2,
+		2, 3, 0, // 正面
+		4, 5, 1,
+		1, 0, 4, // 左面
+		1, 5, 6,
+		6, 2, 1, // 上面
+		3, 2, 6,
+		6, 7, 3, // 右面
+		7, 6, 5,
+		5, 4, 7, // 背面
+		3, 7, 4,
+		4, 0, 3,  // 下面
+		//Rectangular pyramid 四棱锥
+		1, 5, 4,
+		4, 5, 3,
+		3, 5, 2,
+		2, 5, 1,
+		1, 4, 2, // 地面2四边形由两个三角形组成
+		2, 4, 3  // 注意地面的顺序
 	};
 
 	//设置索引缓冲区描述
@@ -194,7 +243,7 @@ bool GameAPP::InitResource()
 	//Builds a view matrix for a left-handed coordinate system using a camera position, an up direction, and a focal point.    
 	m_CBuffer.view = XMMatrixTranspose(XMMatrixLookAtLH
 	(
-		XMVectorSet(0.0f, 0.0f, -5.0f, 0.0f),
+		XMVectorSet(0.0f, 0.0f, 5.0f, 0.0f),
 		XMVectorSet(0.0f, 0.0f, 0.0f, 0.0f),
 		XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f)
 	));
@@ -205,7 +254,7 @@ bool GameAPP::InitResource()
 		//float NearZ,近平面（正）
 		//float FarZ 远平面（负）
 	//);
-	m_CBuffer.projection = XMMatrixTranspose(XMMatrixPerspectiveFovLH(XM_PIDIV2, AspectRatio(), 1.0f, 1000.0f));//XM_PIDIV2：PI/2
+	m_CBuffer.projection = XMMatrixTranspose(XMMatrixPerspectiveFovLH(XM_PI*0.6f, AspectRatio(), 1.0f, 1000.0f));//XM_PIDIV2：PI/2
 
 
 
