@@ -1,0 +1,13 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(RenderCube.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  compilation object save succeeded; see D:\教材\图形学\Direct3D\DirectX11-With-Windows-SDK-master\Direct3D11_Tutorial\04_MouseAndKeyboard\RenderCube\HLSL\Cube_PS.cso
+  compilation object save succeeded; see D:\教材\图形学\Direct3D\DirectX11-With-Windows-SDK-master\Direct3D11_Tutorial\04_MouseAndKeyboard\RenderCube\HLSL\Cube_VS.cso
+  D3DApp.cpp
+  D3DUtil.cpp
+  DXTrace.cpp
+  GameAPP.cpp
+  GamerTimer.cpp
+  Keyboard.cpp
+  main.cpp
+  Mouse.cpp
+  正在生成代码...
+  RenderCube.vcxproj -> D:\教材\图形学\Direct3D\DirectX11-With-Windows-SDK-master\Direct3D11_Tutorial\04_MouseAndKeyboard\Debug\MouseAndKeyboard.exe
