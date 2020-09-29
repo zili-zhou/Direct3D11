@@ -1,0 +1,34 @@
+﻿  GameAPP.cpp
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(115): warning C4348: “Geometry::CreateBox”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(38): message : 参见“Geometry::CreateBox”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(115): warning C4348: “Geometry::CreateBox”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(38): message : 参见“Geometry::CreateBox”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(227): warning C4348: “Geometry::CreateSphere”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(34): message : 参见“Geometry::CreateSphere”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(227): warning C4348: “Geometry::CreateSphere”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(34): message : 参见“Geometry::CreateSphere”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(333): warning C4348: “Geometry::CreateCylinderNoCap”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(47): message : 参见“Geometry::CreateCylinderNoCap”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(333): warning C4348: “Geometry::CreateCylinderNoCap”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(47): message : 参见“Geometry::CreateCylinderNoCap”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(389): warning C4348: “Geometry::CreateCylinder”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(42): message : 参见“Geometry::CreateCylinder”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(389): warning C4348: “Geometry::CreateCylinder”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(42): message : 参见“Geometry::CreateCylinder”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(461): warning C4348: “Geometry::CreateConeNoCap”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(56): message : 参见“Geometry::CreateConeNoCap”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(461): warning C4348: “Geometry::CreateConeNoCap”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(56): message : 参见“Geometry::CreateConeNoCap”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(510): warning C4348: “Geometry::CreateCone”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(52): message : 参见“Geometry::CreateCone”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(510): warning C4348: “Geometry::CreateCone”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(52): message : 参见“Geometry::CreateCone”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(556): warning C4348: “Geometry::Create2DShow”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(60): message : 参见“Geometry::Create2DShow”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(556): warning C4348: “Geometry::Create2DShow”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(60): message : 参见“Geometry::Create2DShow”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(590): warning C4348: “Geometry::Create2DShow”: 重定义默认参数 : 参数 1
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(63): message : 参见“Geometry::Create2DShow”的声明
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(590): warning C4348: “Geometry::Create2DShow”: 重定义默认参数 : 参数 2
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\TextureMapping\Geometry.h(63): message : 参见“Geometry::Create2DShow”的声明
+  TextureMapping.vcxproj -> D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\07_Texture Mapping\TextureMapping\Debug\TextureMapping.exe
