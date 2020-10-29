@@ -1,0 +1,3 @@
+﻿  D3DApp.cpp
+D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\08_Camera\Camera\Camera\D3DApp.cpp(292,1): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+  Camera.vcxproj -> D:\教材\图形学\Direct3D\DirectX11master\Direct3D11_Tutorial\08_Camera\Camera\Debug\Camera.exe
